@@ -17,7 +17,9 @@
     border: 0;     /* for not showing any black shade at the edge of border*/
     cursor: pointer;  /* for showing hand cursor of mouse cursor */
 }
-
+.text-light-gray{
+    color: #727272;
+}
 /* header styles */
 header {
     background: rgba(255, 144, 14, 0.10);
@@ -64,54 +66,16 @@ nav li a {
     font-size: 64px;
     font-weight: 700;
 }
-
-.banner-description{
-    color: #727272;
-}
 .banner img{
     margin-top: 20px;
     width: 100%;
 }
 
 
-/* responsive media queries */
-/* mobile devices */
-@media screen and (max-width: 576px) {
-    header{
-        padding: 20px;
-    }
-    nav{
-        flex-direction: column;
-    }
-    .banner-content{
-        width: auto;
-    }
-    .banner-title{
-        font-size: 30px;
-    }
-}
-
-/* tablet or medium devices */
-@media screen and (min-width:576px) and (max-width:960px) {
-    header{
-        padding: 50px;
-    }
-    nav {
-        flex-direction: column;
-    }
-    .banner-content{
-        width: 400px;
-        font-size: 20px;
-    }
-    .banner-title{
-        font-size: 30px;
-    }
-}
-
 /* main styles */
 main{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 /* teams container */
 .teams-container{
@@ -131,10 +95,63 @@ main{
     font-size: 2.8rem;  /*or 45px   here rem is used to make the website responsive */
 }
 .teams-title .quick-list{
-    color: #727272;
     font-weight: 500;
 }
 .teams-title .text-features{
     color: #FF900E;
     font-weight: 700;
+}
+
+
+
+
+
+/* responsive media queries */
+/* mobile devices */
+@media screen and (max-width: 576px) {
+    header{
+        padding: 20px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .banner-content{
+        width: auto;
+    }
+    .banner-title{
+        font-size: 30px;
+    }
+    .teams-image-container{
+        grid-template-columns: 1fr;  /* to keep the the image one by one in downside*/
+    }
+    .teams-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+/* tablet or medium devices */
+@media screen and (min-width: 576px) and (max-width: 960px) {
+    header{
+        padding: 50px;
+    }
+    nav,
+    .teams-container
+    {
+        flex-direction: column;
+    }
+    .banner-content{
+        width: 400px;
+        font-size: 20px;
+    }
+    .banner-title{
+        font-size: 30px;
+    }
+    .teams-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
